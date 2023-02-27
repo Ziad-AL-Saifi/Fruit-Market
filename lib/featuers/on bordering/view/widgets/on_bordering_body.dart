@@ -100,17 +100,14 @@ class _OnBorderingBodyState extends State<OnBorderingBody> {
                     ? (pagecontroller!.page! > 1.5 ? "Get Start" : "Next")
                     : "Next",
                 fun: () {
-                  if (pagecontroller!.hasClients &&
-                      pagecontroller!.page! == 2) {
-                    Get.to(() => const LoginView());
+                  if (pagecontroller!.page! < 2) {
+                    pagecontroller!.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  } else {
+                    Get.to(() => const LoginView(),
+                        transition: Transition.leftToRight);
                   }
-
-                  pagecontroller!.animateToPage(
-                      pagecontroller!.hasClients
-                          ? (pagecontroller!.page! == 0 ? 1 : 2)
-                          : 0,
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.easeIn);
                 }),
           )
         ],
