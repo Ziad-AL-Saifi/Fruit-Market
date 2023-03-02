@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/manager/size.dart';
-
 class SkipWidget extends StatelessWidget {
   const SkipWidget({
     Key? key,

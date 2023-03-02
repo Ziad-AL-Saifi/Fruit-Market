@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:fruit/core/manager/colors_managers.dart';
 import 'package:fruit/core/manager/size.dart';
 import 'package:fruit/featuers/auth/presintation/view/login/view/login_view.dart';
-import 'package:fruit/featuers/splash/views/splash_view.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/widgets/button.dart';
